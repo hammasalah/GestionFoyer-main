@@ -1,5 +1,5 @@
+//entity
 package org.esprim.gestionfoyer.entities;
-
 import jakarta.persistence.*;
 import lombok.*;
 

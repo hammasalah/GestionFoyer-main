@@ -20,8 +20,9 @@ public class Foyer implements Serializable {
     private String nomFoyer;
     @Column (nullable = false , name ="capacite")
     private String capaciteFoyer;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "foyer")
 
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "foyer")
     private List<Bloc> blocs;
     @OneToOne ()
     @JoinColumn(name="universite_id")

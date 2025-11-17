@@ -1,3 +1,4 @@
+//enum
 package org.esprim.gestionfoyer.entities;
 
 public enum TypeChambre {

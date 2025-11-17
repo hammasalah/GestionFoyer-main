@@ -1,3 +1,4 @@
+//repo
 package org.esprim.gestionfoyer.repositories;
 
 import org.esprim.gestionfoyer.entities.Bloc;

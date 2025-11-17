@@ -1,3 +1,4 @@
+//main
 package org.esprim.gestionfoyer;
 
 import org.springframework.boot.SpringApplication;

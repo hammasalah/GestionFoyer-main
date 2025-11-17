@@ -1,3 +1,4 @@
+//service_inter
 package org.esprim.gestionfoyer.service;
 import org.esprim.gestionfoyer.entities.Bloc;
 
@@ -9,4 +10,6 @@ public interface IBlocService {
     public Bloc addBloc(Bloc b);
     public void removeBloc(Long BlocId);
     public Bloc modifyBloc(Bloc bloc);
+    Bloc affecterChambreABloc(List<Long> nnumChambre, Long idBloc );
 }
+
