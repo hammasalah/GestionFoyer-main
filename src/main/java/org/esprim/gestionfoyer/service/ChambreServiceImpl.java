@@ -1,12 +1,13 @@
 package org.esprim.gestionfoyer.service;
 
 
+import java.util.List;
+
 import org.esprim.gestionfoyer.entities.Chambre;
+import org.esprim.gestionfoyer.entities.TypeChambre;
 import org.esprim.gestionfoyer.repositories.ChambreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 // @AllArgsConstructor  here or @Autowired
@@ -34,5 +35,20 @@ public class ChambreServiceImpl implements IChambreService {
     @Override
     public Chambre modifyChambre(Chambre chambre) {
         return chambreRepository.save(chambre);
+    }
+
+    @Override
+    public List<Chambre> getChambresParNomUniversite(String nomUniversite) {
+        return chambreRepository.findByBlocFoyerUniversiteNomUniversite(nomUniversite);
+    }
+
+    @Override
+    public List<Chambre> getChambresParBlocEtType(long idBloc, TypeChambre typeC) {
+        return chambreRepository.findByBlocIdAndTipoChambre(idBloc, typeC);
+    }
+
+    @Override
+    public List<Chambre> getChambresParBlocEtTypeJPQL(long idBloc, TypeChambre typeC) {
+        return chambreRepository.findByBlocIdAndTipoChambreJPQL(idBloc, typeC);
     }
 }
